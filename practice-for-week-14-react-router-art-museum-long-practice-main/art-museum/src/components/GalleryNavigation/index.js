@@ -1,8 +1,9 @@
 import {NavLink} from "react-router-dom"
 import Gallery from "./gallery"
+import './GalleryNavigation.css'
 
 const GalleryNavigation = ({galleries}) => {
-    console.log(galleries)
+    console.log(typeof galleries)
     
     const gallery = galleries.map(gallery => {
         return (
@@ -13,7 +14,7 @@ const GalleryNavigation = ({galleries}) => {
     return (
         <div>
             <h1>Galleries</h1>
-            <NavLink to="/">Home</NavLink>
+            <NavLink exact to="/">Home</NavLink>
             <ul>{gallery}</ul>
         </div>
     )
